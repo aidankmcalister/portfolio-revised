@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import { useState } from "react";
 import "./styles/main.css";
 import Navbar from "./components/universalComponents/Navbar";
 import Footer from "./components/universalComponents/Footer";
@@ -9,10 +10,21 @@ import ContactPage from "./pages/ContactPage";
 import MenuOverlay from "./components/mobile/MenuOverlay";
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const openMenuHandler = () => {
+    setIsMenuOpen(true);
+  };
+
+  const closeMenuHandler = () => {
+    setIsMenuOpen(false);
+  };
   return (
     <div>
-      <Navbar />
-      <MenuOverlay />
+      <Navbar openMenuHandler={openMenuHandler} />
+
+      {isMenuOpen && <MenuOverlay closeMenuHandler={closeMenuHandler} />}
+
       <div className="mt-10"></div>
       <Routes>
         <Route path="/" element={<Homepage />} />
