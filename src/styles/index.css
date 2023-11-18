@@ -9,7 +9,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #011627;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,4 +17,8 @@
   -moz-osx-font-smoothing: grayscale;
 
   --fira: "Fira Code", monospace;
+
+  --main-blue: #011627;
+  --secondary-blue: #607b96;
+  --tertiary-blue: #1e2d3d;
 }

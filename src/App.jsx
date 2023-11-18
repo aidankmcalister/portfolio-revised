@@ -25,7 +25,7 @@ function App() {
 
       {isMenuOpen && <MenuOverlay closeMenuHandler={closeMenuHandler} />}
 
-      <div className="mt-10"></div>
+      <div className="mt-12"></div>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/about" element={<AboutPage />} />
