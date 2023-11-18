@@ -8,6 +8,7 @@ module.exports = withMT({
       "main-blue": "var(--main-blue)",
       "secondary-blue": "var(--secondary-blue)",
       "tertiary-blue": "var(--tertiary-blue)",
+      "main-green": "var(--main-green)",
     },
     extend: {
       fontFamily: {

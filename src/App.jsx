@@ -20,7 +20,7 @@ function App() {
     setIsMenuOpen(false);
   };
   return (
-    <div>
+    <div className="font-fira">
       <Navbar openMenuHandler={openMenuHandler} />
 
       {isMenuOpen && <MenuOverlay closeMenuHandler={closeMenuHandler} />}
