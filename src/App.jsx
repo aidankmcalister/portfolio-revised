@@ -20,19 +20,21 @@ function App() {
     setIsMenuOpen(false);
   };
   return (
-    <div className="font-fira">
+    <div className="font-fira overflow-x-hidden">
       <Navbar openMenuHandler={openMenuHandler} />
 
       {isMenuOpen && <MenuOverlay closeMenuHandler={closeMenuHandler} />}
 
-      <div className="mt-12"></div>
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-      </Routes>
-      <div className="mb-10"></div>
+      <div className="mt-10 lg:mt-0"></div>
+      <div className="min-h-screen w-full flex items-center">
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </div>
+      <div className="mb-10 lg:mb-0"></div>
 
       <Footer />
     </div>
